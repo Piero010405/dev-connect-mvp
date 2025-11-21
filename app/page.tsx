@@ -5,20 +5,29 @@ import type React from "react"
 import { useState } from "react"
 import { DevButton } from "@/components/dev-button"
 import { DevInput } from "@/components/dev-input"
+import { useAuth } from "@/hooks/useAuth"
 
 export default function LoginPage() {
+  const { login } = useAuth()
+
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    // Simulate login
-    setTimeout(() => {
+    setErrorMessage("")
+
+    try {
+      await login(email, password)
       window.location.href = "/dashboard"
+    } catch (err: any) {
+      setErrorMessage(err.message)
+    } finally {
       setIsLoading(false)
-    }, 600)
+    }
   }
 
   return (
