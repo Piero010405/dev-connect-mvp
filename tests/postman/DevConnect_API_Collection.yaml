@@ -1,0 +1,4 @@
+- name: Run Postman Tests
+  run: |
+    npx newman run tests/postman/DevConnect_API_Collection.json \
+      -e tests/postman/environment.json
