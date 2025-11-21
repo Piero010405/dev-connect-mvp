@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Personal/10MO%20CICLO/PFC3/DEV-CONNECT/app/dashboard/layout.tsx"],"sourcesContent":["import type React from \"react\"\r\nexport const metadata = {\r\n  title: \"Dashboard - DevConnect\",\r\n  description: \"Dashboard de DevConnect - Evaluaciones técnicas\",\r\n}\r\n\r\nexport default function DashboardRootLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode\r\n}) {\r\n  return children\r\n}\r\n"],"names":[],"mappings":";;;;;;AACO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEe,SAAS,oBAAoB,EAC1C,QAAQ,EAGT;IACC,OAAO;AACT"}}]
+}

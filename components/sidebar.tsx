@@ -7,6 +7,12 @@ import { cn } from "@/lib/utils"
 export function Sidebar() {
   const pathname = usePathname()
 
+  const logout = () => {
+    // Lógica para cerrar sesión
+    console.log("Cerrando sesión...")
+    window.location.href = "/"
+  }
+
   const navItems = [
     { href: "/dashboard", label: "Home" },
     { href: "/dashboard/evaluations", label: "Evaluaciones Técnicas" },
@@ -40,7 +46,9 @@ export function Sidebar() {
 
       {/* Footer */}
       <div className="p-4 border-t border-[#2A2A2A]">
-        <button className="w-full px-4 py-2.5 rounded-lg bg-[#2A2A2A] text-[#D4D4D4] hover:bg-[#333333] transition-all font-sans text-sm font-medium">
+        <button className="w-full px-4 py-2.5 rounded-lg bg-[#2A2A2A] text-[#D4D4D4] hover:bg-[#333333] transition-all font-sans text-sm font-medium"
+        onClick={logout()}
+        >
           Cerrar Sesión
         </button>
       </div>
