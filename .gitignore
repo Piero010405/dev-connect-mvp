@@ -1,6 +1,7 @@
 # Directorio de dependencias de Node
 node_modules/
 
+.next/
 dist/
 .env.local
 .vscode/
